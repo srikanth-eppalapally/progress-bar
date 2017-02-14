@@ -1,0 +1,19 @@
+<div class="col-xs-12">
+    <div class="progress-bar-container">
+        <h1>Progress bar</h1>
+    <div class="progress-bar-selection">
+    <div class="col-xs-12" ng-repeat="bars in vm.endPoint.bars track by $index ">
+    <div class="form-horizontal" data-progress-bar="" data-limit="vm.endPoint.limit" data-value="bars">
+    </div>
+    </div>
+    <div class="col-xs-12 buttons-group">
+        <div class="col-xs-5">
+            <select class="form-control" ng-change="vm.selectProgressBar()" ng-model="vm.selectedProgressBar" ng-options="bar as bar.name for bar in vm.barsList"></select>
+        </div>
+        <div class="col-xs-7">
+            <div class="pull-left offset-10" ng-repeat="buttons in vm.endPoint.buttons">
+            <button type="button" class="btn btn-default" ng-click="vm.changeProgressBarValue(buttons)">{{buttons}}</button>
+            </div>
+        </div>
+    </div></div>
+</div></div>
